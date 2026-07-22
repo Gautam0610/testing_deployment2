@@ -1,0 +1,76 @@
+[
+  {
+    "env_name": "KAFKA_BOOTSTRAP_SERVERS",
+    "variable_type": "String",
+    "mandatory": true,
+    "about_variable": "[Kafka Common] Comma-separated list of Kafka bootstrap servers."
+  },
+  {
+    "env_name": "KAFKA_SECURITY_PROTOCOL",
+    "variable_type": "String",
+    "mandatory": true,
+    "default_value": "SASL_PLAINTEXT",
+    "about_variable": "[Kafka Common] Kafka security protocol (e.g., SASL_PLAINTEXT, SSL)."
+  },
+  {
+    "env_name": "KAFKA_SASL_MECHANISM",
+    "variable_type": "String",
+    "mandatory": true,
+    "default_value": "PLAIN",
+    "about_variable": "[Kafka Common] SASL authentication mechanism (e.g., PLAIN, SCRAM-SHA-256, SCRAM-SHA-512)."
+  },
+  {
+    "env_name": "KAFKA_SASL_USERNAME",
+    "variable_type": "String",
+    "mandatory": true,
+    "about_variable": "[Kafka Common] SASL username for Kafka authentication."
+  },
+  {
+    "env_name": "KAFKA_SASL_PASSWORD",
+    "variable_type": "Password",
+    "mandatory": true,
+    "about_variable": "[Kafka Common] SASL password for Kafka authentication."
+  },
+  {
+    "env_name": "KAFKA_DLQ_TOPIC",
+    "variable_type": "Output Topic",
+    "mandatory": true,
+    "default_value": "order-processing-dlq",
+    "about_variable": "[Kafka Common] Kafka Dead Letter Queue (DLQ) topic for failed messages."
+  },
+  {
+    "env_name": "INPUT_CONNECTOR_TOPIC",
+    "variable_type": "Input Topic",
+    "mandatory": true,
+    "default_value": "raw-orders",
+    "about_variable": "[Input Connector] Kafka topic to consume raw order messages from."
+  },
+  {
+    "env_name": "INPUT_CONNECTOR_GROUP_ID",
+    "variable_type": "String",
+    "mandatory": true,
+    "default_value": "order-input-consumer-group",
+    "about_variable": "[Input Connector] Kafka consumer group ID for the input connector."
+  },
+  {
+    "env_name": "TRANSFORM_MIN_ORDER_VALUE",
+    "variable_type": "Float",
+    "mandatory": true,
+    "default_value": 10.0,
+    "about_variable": "[Transformation] Minimum order value required for an order to be processed."
+  },
+  {
+    "env_name": "TRANSFORM_PROCESSING_INTERVAL_SEC",
+    "variable_type": "Integer",
+    "mandatory": true,
+    "default_value": 1,
+    "about_variable": "[Transformation] Interval in seconds at which the transformation module processes messages."
+  },
+  {
+    "env_name": "OUTPUT_CONNECTOR_TOPIC",
+    "variable_type": "Output Topic",
+    "mandatory": true,
+    "default_value": "processed-orders",
+    "about_variable": "[Output Connector] Kafka topic to produce processed order messages to."
+  }
+]
