@@ -1,0 +1,14 @@
+{
+  "order_id": "ORD001",
+  "customer_id": "CUST001",
+  "items": [
+    {
+      "item_id": "ITEM001",
+      "name": "Laptop",
+      "quantity": 1,
+      "unit_price": 1200.00
+    }
+  ],
+  "total_amount": 1200.00,
+  "timestamp": "2023-10-27T10:00:00Z"
+}
